@@ -1,0 +1,12 @@
+{
+    "probability": {
+      "bruhb": {
+        "difficulty": 2,
+        "text": "A calculating machine uses the digits 0 and 1 and transmits one of these digits through several stages. At every stage, there is a probability $p$ that the digit will be changed when it leaves and probability q=1-p that it will not. Suppose the machine starts at state 0. What is the probability that the machine will display the correct digit after 2 stages?",
+        "function": "(p) => p * p + (1 - p) * (1 - p)",
+        "variables": {
+            "a": [0.1, 0.2, 0.3, 0.4]
+        }
+      }
+    }
+}
