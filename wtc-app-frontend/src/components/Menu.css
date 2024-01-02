@@ -1,0 +1,29 @@
+.menu {
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.menu-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu-item {
+    float: center;
+}
+
+.menu-item a {
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu-item a:hover {
+    background-color: #efa3a383;
+    color: #00026583;
+}
+
