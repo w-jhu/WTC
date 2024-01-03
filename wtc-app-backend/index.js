@@ -10,7 +10,8 @@ console.log(json);
 fn = eval(json.probability.bruhb.function);
 a = json.probability.bruhb.variables.a;
 
-var randomIndex = Math.floor(Math.random() * a.length);
+var randomIndexA = Math.floor(Math.random() * a.length);
+var randomIndexB = Math.floor(Math.random() * b.length);
 
 // Get the random variable
 var randomA = a[randomIndex];

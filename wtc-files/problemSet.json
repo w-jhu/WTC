@@ -1,12 +1,46 @@
 {
     "probability": {
-      "bruhb": {
+      "task_1": {
         "difficulty": 2,
         "text": "A calculating machine uses the digits 0 and 1 and transmits one of these digits through several stages. At every stage, there is a probability $p$ that the digit will be changed when it leaves and probability q=1-p that it will not. Suppose the machine starts at state 0. What is the probability that the machine will display the correct digit after 2 stages?",
         "function": "(p) => p * p + (1 - p) * (1 - p)",
         "variables": {
             "a": [0.1, 0.2, 0.3, 0.4]
         }
+      },
+      "task_2": {
+        "difficulty": 3,
+        "text": "Samuel flips a fair coin until he lands a tails. By playing this game, Samuel receives min($m$,2^n), where n is the number of flips he makes. What is the expected return of the game?",
+        "function": "(m) => log_2(m)+1",
+        "variables": {
+            "a": [2, 4, 8, 16, 32, 64, 128]
+        }
+      },
+      "task_3": {
+        "difficulty": 3,
+        "text": "Find the expected number of coin tosses to get $n$ heads in the row? (coin is fair)",
+        "function": "(n) => 2*(2^n-1)",
+        "variables": {
+            "a": [3, 4, 5, 6, 2, 7]
+        }
+      },
+      "task_5": {
+        "difficulty": 2,
+        "text": "How many coin flips would you expect to need to get $n$ tails in a row?",
+        "function": "(n) => 6",
+        "variables": {
+            "a": [2]
+        }
       }
-    }
+    },
+    "number_theory":{
+      "task_4": {
+        "difficulty": 5,
+        "text": " Given a positive integer N (written in base 10), define its integer substrings to be integers that are equal to strings of one or more consecutive digits from N, including N itself. For example, the integer substrings of $n$ are 3, 2, 0, 8, 32, 20, 320, 208, and 3208. (The substring 08 is omitted from this list because it is the same integer as the substring 8, which is already listed.) What is the greatest integer N such that no integer substring of N is a multiple of 9? (Note: 0 is a multiple of 9.)",
+        "function": "(n) => 88888888",
+        "variables": {
+            "a": [3208]
+        }
+      }
+      }
 }
