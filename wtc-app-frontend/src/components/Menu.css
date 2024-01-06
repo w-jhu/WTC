@@ -10,6 +10,11 @@
     display: flex;
 }
 
+.menu-logo {
+    height: 50px;
+    transform: rotate(270deg);
+}
+
 .menu-item {
     float: center;
 }
