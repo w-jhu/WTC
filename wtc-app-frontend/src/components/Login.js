@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import './Login.css';
 
 
@@ -16,6 +17,9 @@ function Login() {
       alert('Invalid username or password');
     }
   };
+function changePage() {
+    window.location.href = "/register";
+}
 
   return (
     <div className="Login">
@@ -42,6 +46,9 @@ function Login() {
         <br />
         <button type="button" onClick={attemptLogin}>
           Login
+        </button>
+        <button type="button" onClick={changePage}>
+          Register
         </button>
       </form>
     </div>

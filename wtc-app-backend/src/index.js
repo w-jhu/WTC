@@ -7,11 +7,13 @@ app.use(express.urlencoded({ extended: true}));
 const json = require('/Users/iliapopov/wtc-app/wtc-files/problemSet.json');
 console.log(json);
 
-fn = eval(json.probability.bruhb.function);
-a = json.probability.bruhb.variables.a;
+// Gets the function of the answer out of the file
+fn = eval(json.probability.task_1.function);
+// Gets the variables of the problem
+a = json.probability.task_1.variables.a;
 
 var randomIndexA = Math.floor(Math.random() * a.length);
-var randomIndexB = Math.floor(Math.random() * b.length);
+// var randomIndexB = Math.floor(Math.random() * b.length);
 
 // Get the random variable
 var randomA = a[randomIndex];
