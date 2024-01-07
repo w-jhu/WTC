@@ -1,34 +1,67 @@
-.menu {
+@font-face {
+    font-family: 'Aldrich';
+    src: url('./fonts/Aldrich-Regular.ttf') format('truetype'); /* Replace with the correct path to your Aldrich font file */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .menu {
     background-color: #ffffff;
     overflow: hidden;
-}
+    position: relative;
+    left: 100px;
 
-.menu-list {
+  }
+  
+  .menu::after {
+    content: "";
+    display: block;
+    width: 80%;
+    left: 1.5%;
+    bottom: 0;
+    height: 1px; /* Set the height of the line */
+    background-color: #262460; /* Set the color of the line */
+    position: absolute;
+  }
+  
+  .menu-list {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-}
-
-.menu-logo {
-    height: 50px;
-    transform: rotate(270deg);
-}
-
-.menu-item {
-    float: center;
-}
-
-.menu-item a {
-    display: inline-block;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 14px 16px;
+    justify-content: center;
+  }
+  
+  .menu-logo {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    width: 140px;
+    height: 140px;
     text-decoration: none;
-}
-
-.menu-item a:hover {
-    background-color: #efa3a383;
+  }
+  
+  .menu-item {
+    margin-right: 50px;
+    margin-top: 10px;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .menu-item a {
+    display: inline-block;
+    border-radius: 10px;
+    transition: color 0.5s ease;
+    color: #262460;
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Aldrich';
+  }
+  
+  .menu-item a:hover {
+    background-color: #eeedea;
     color: #00026583;
-}
+  }
+  
 
