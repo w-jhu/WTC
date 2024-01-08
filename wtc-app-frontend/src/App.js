@@ -8,6 +8,7 @@ import Compete from './components/pages/Compete';
 import Learn from './components/pages/Learn';
 import Leaderboard from './components/pages/Leaderboard';
 import Login from './components/Login';
+import Register from './components/Register';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/learn" element={<Learn/>} />
           <Route path="/leaderboard" element={<Leaderboard/>} />
           <Route path="/login" element={<Login/>} />
+          <Route path="/register" element={<Register/>} />
         </Routes>
       </div>
     </Router>

@@ -1,11 +1,13 @@
 import React from 'react';
 import './Menu.css';
+import logo from './images/wtclogo.svg';
 import { Link } from 'react-router-dom';
 
 const Menu = () => {
     return (
         <nav className="menu">
             <ul className="menu-list">
+                <li className="menu-logo"><Link to="/"><img src={logo} alt="Home" className="menu-logo" /></Link> </li>
                 <li className="menu-item"><Link to="/train">Train</Link></li>
                 <li className="menu-item"><Link to="/compete">Compete</Link></li>
                 <li className="menu-item"><Link to="/learn">Learn</Link></li>
