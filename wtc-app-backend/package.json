@@ -18,9 +18,6 @@
   "jest": {
     "setupFiles": [
       "<rootDir>/src/test/jest.setup.js"
-    ],
-    "express": "^4.18.2",
-    "mongodb": "^6.3.0",
-    "mongoose": "^8.0.3"
+    ]
   }
 }
