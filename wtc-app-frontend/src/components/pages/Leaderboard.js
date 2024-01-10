@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Leaderboard = () => {
-    return <div>Leaderboard</div>;
+    return <div>Currently unavaialble</div>;
 };
 
 export default Leaderboard;
