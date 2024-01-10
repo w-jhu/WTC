@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Learn = () => {
-    return <div>Learn page</div>;
+    return <div>Currently unavaialble</div>;
 };
 
 export default Learn;

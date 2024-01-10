@@ -16,10 +16,16 @@
     font-weight: normal;
     font-style: normal;
 }
+.FrontPage{
+    text-align: center;
+    height: 170vh;
+    margin: 0;
+    overflow: hidden;
+}
 #light {
     left: 0;
     width: 100vw;
-    height: 95vh;
+    height: 135vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,6 +43,8 @@
     z-index: 2;
     text-align: left;
   }
+
+  /* Top text in css */
 
   .WTC-global-1 {
     position: relative;
@@ -65,12 +73,48 @@
   .WTC-local-2-1{
     color: #990000;
   }
-  
+
+  .sponsors-text::before{
+    content: "";
+    display: block;
+    width: 80%;
+    left: 9.1%;
+    bottom: 1;
+    height: 1px; /* Set the height of the line */
+    background-color: #262460; /* Set the color of the line */
+    position: absolute;
+  }
+
+  .sponsors-text{
+    position: relative;
+    left: -10px;
+    top: 32px;
+    font-family: 'Poppins-Bold';
+    color: black;
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+    font-size: 45px;
+  }
+  .subheader-1 {
+    position: relative;
+    font-family: 'Poppins-Bold';
+    left: -140px;
+    top:-15px;
+    color: #262460;
+    font-size:25px;
+  }
+  .subheader-2 {
+    position: relative;
+    font-family: 'Poppins-Bold';
+    left: -50px;
+    color: #262460;
+    font-size:25px;
+  }
   .summary-window {
     display: block;
     margin-bottom: 20px;
     color: #262460;
     font-size: 30px;
+    position: relative;
     font-family: 'Poppins';
   }
   
@@ -78,9 +122,10 @@
   #prizes-button,
   #hours-button,
   #tasks-button {
-    padding: 5px 10px;
+    padding: 0px 5px;
     background-color: white;
     color: #262460;
+    width: 100px;
     border: 1px solid #999;
     border-radius: 5px;
     font-size: 30px;
@@ -94,16 +139,19 @@
   #tasks-button:hover {
     background-color: rgb(246, 246, 246);
   }
-  /* TerminalWindow.css */
+/* TerminalWindow.css */
 
 .terminal-window {
-    width: 600px;
+    width: 1000px;
     height: 400px;
-    background-color: #0a0a0a;
-    border: solid #026cb5;
+    background-color: #2d2c41;
+    border: solid #2d2c41;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: -435px;
+    margin-left: 225px;
+    box-shadow: 8px 8px 1px rgba(0, 0, 0, 0.2);
+    z-index: 2;
   }
   
   .terminal-header {
@@ -112,39 +160,72 @@
     display: flex;
     justify-content: flex-end;
   }
-  
+  .terminal-header-text {
+    position: absolute;
+    margin-top: 2px;
+    margin-right: 750px;
+    font-size: 16px;
+    font-family: 'Cascadia Code', monospace;
+  }
   .button {
     width: 20px;
     height: 20px;
     margin-left: 10px;
-  }
-  
-  .close {
+    border: solid #2d2c41;
     background-color: white;
-    border: solid #026cb5;
-  }
-  .close:hover{
-    background-color:#990000 ;
+    font-family: 'Poppins';
   }
   
-  .minimize {
+ .button.close:hover {
+    background-color: #990000;
+    border: solid #990000;
+  }
+  
+  .button.close:hover > .cross {
+    color: white;
+    cursor: default;
+  }
+
+
+  .button.maximize {
+    position: relative;
+  }
+  
+  .button.maximize::before {
+    content: '';
+    position: absolute;
+    width: 8px; /* Adjust the size of the square */
+    height: 8px; /* Adjust the size of the square */
+    background-color: white; /* Adjust the color of the square */
+    border: solid #2d2c41;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .button.maximize:hover{
+    background-color: #2d2c41;
+  }
+  .button.maximize:hover::before {
+    background-color: #2d2c41; /* Change the color when hovering if needed */
+    border: solid white;
+  }
+  
+  .button.minimize{
     background-color: white;
-    border: solid #026cb5;
   }
-  
-  
-  .maximize {
-    background-color: white;
-    border: solid #026cb5;
+  .button.minimize:hover {
+    background-color:#2d2c41 ;
   }
-  .maximize:hover {
-    background-color:#990000 ;
+  .button.minimize:hover > .underline {
+    color: white;
+    cursor: default;
   }
   
   .terminal-content {
     padding: 16px;
     color: #d4d4d4;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
     height: calc(100% - 40px);
     overflow-y: auto;
   }
@@ -155,9 +236,10 @@
     margin-bottom: 10px;
   }
   
-  .prompt {
-    color: #00ff00;
-    margin-right: 5px;
+  .test{
+    width: 200px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    background-color: #3498db; /* Set background color */
   }
   
   .command-input {
@@ -176,12 +258,22 @@
   }
 
   .cross {
+    position: absolute;
+    margin-top: 4px;
+    margin-left: -5.3px;
     font-size: 14px;
     line-height: 14px;
-    color: #026cb5;
+    color: #2d2c41;
+    pointer-events: none;
   }
-  .cross:hover{
-    color: white;
+
+  .underline {
+    position: absolute;
+    margin-top: -4px;
+    margin-left: -6.5px;
+    font-size: 16px;
+    color: #2d2c41;
+    pointer-events: none;
   }
-  
+
   

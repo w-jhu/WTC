@@ -1,0 +1,35 @@
+/* Blobs.css */
+.blobs-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.blob {
+  position: absolute;
+  opacity: 0.8; /* Adjust opacity as needed */
+}
+
+.blob1 {
+  clip-path: polygon(0 50%, 50% 0%, 100% 50%, 50% 100%);
+  background-color: #3498db; /* Blob color */
+  width: 150px;
+  height: 150px;
+  top: 20vh;
+  left: 20vw;
+}
+
+.blob2 {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
+  background-color: #e74c3c; /* Blob color */
+  width: 200px;
+  height: 200px;
+  top: 60vh;
+  left: 70vw;
+}
+
+  
+  
