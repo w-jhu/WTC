@@ -1,25 +1,34 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import './Login.css';
-
+import axios from 'axios';
 
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const attemptLogin = () => {
-    // Perform validation
-    if (username === 'user' && password === 'password') {
-      alert('Login successful!');
-      // Redirect to the user's dashboard or another page
-      // window.location.href = '/dashboard';
-    } else {
-      alert('Invalid username or password');
+  const attemptLogin = async () => {
+    try {
+        const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/login`, {
+            username,
+            password
+        });
+
+        alert('Login successful!');
+        // Save received token to in-memory storage
+        localStorage.setItem('token', response.data.token);
+
+        // Redirect after sign in (maybe to home page or page user was trying to access?)
+        history.push('/');
+    } catch (error) {
+        alert('Invalid username or password');
+        console.error("Login error:", error);
     }
   };
-function changePage() {
+
+  function changePage() {
     window.location.href = "/register";
-}
+  }
 
   return (
     <div className="Login">

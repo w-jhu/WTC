@@ -1,24 +1,35 @@
 import './Register.css';
 import { Link } from 'react-router-dom';
 import React from 'react';
+import axios from 'axios';
 
-const Register = () => {
-  const registerUser = (event) => {
+const registerUser = (event) => {
     event.preventDefault();
 
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    // Basic password length validation
     if (password.length < 8) {
-      alert('Password must be at least 8 characters long.');
-      return;
+        alert('Password must be at least 8 characters long.');
+        return;
     }
 
-    // Add your registration logic here (e.g., sending data to a server)
-    console.log('Name:', name, ', Email:', email, ', Password:', password);
-  };
+    const user = {
+        name,
+        email,
+        password
+    };
+
+    axios.post(`${process.env.REACT_APP_BACKEND_URL}/register`, user)
+        .then(response => {
+            console.log(response.data);
+            // Redirect to login page
+        })
+        .catch(error => {
+            console.error("Registration error:", error);
+            // Handle error
+        });
 
   return (
     <div className="container">
