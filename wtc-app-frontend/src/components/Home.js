@@ -76,13 +76,13 @@ const Home = () => {
     <div id="light"> 
     </div>
     <ul className="board">
-        <div class="WTC-global-1">
-            <span class="WTC-local-1-1">WELCOME</span> TO <span class="WTC-local-1-2">WHARTON</span> 
+        <div className="WTC-global-1">
+            <span className="WTC-local-1-1">WELCOME</span> TO <span className="WTC-local-1-2">WHARTON</span> 
         </div>
-        <div class="WTC-global-2">
-            <span class="WTC-local-2-1">TRADING</span> COMPETITION!
+        <div className="WTC-global-2">
+            <span className="WTC-local-2-1">TRADING</span> COMPETITION!
         </div>
-        <div class = 'subheader-1'>Join our vibrant community. Over our long history we got:
+        <div className= 'subheader-1'>Join our vibrant community. Over our long history we got:
         </div>
         <li className="summary-window">
             <button id="quants-button"><AnimatedCounter targetNumber={197} duration={5} /></button>
@@ -100,7 +100,7 @@ const Home = () => {
             <button id="tasks-button"><AnimatedCounter targetNumber={1097} duration={5} /></button>
             Tasks Have Been Solved
         </li>
-        <div class = 'subheader-2'>And an infinite number of great memories!
+        <div className='subheader-2'>And an infinite number of great memories!
         </div>
     </ul>
     <div className="terminal-window">
@@ -117,8 +117,8 @@ const Home = () => {
         <p>We know that everyone’s background is unique, so our website is made to be helpful to both complete novices and seasoned seniors in the field. With the help of the training section newcomers can practice their skills, while professionals can try to win cash prizes for being the best in the competition section. Yet, most importantly, we want everyone to have good fun while trying to crack fascinating quantitative finance challenges!</p> 
       </div>
     </div>
-    <div class="sponsors-text">
-            <span class="WTC-local-1-2">SPONSORS</span> 
+    <div className="sponsors-text">
+            <span className="WTC-local-1-2">SPONSORS</span> 
     </div>
     <ul style={{ listStyleType: 'none', padding: 0, display: 'flex', gap: '150px', marginLeft: '160px', marginTop: '30px',}}>
       {pictureSources.map((src, index) => (

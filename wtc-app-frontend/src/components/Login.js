@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
 import axios from 'axios';
 
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-
+  const navigate = useNavigate();
   const attemptLogin = async () => {
     try {
-        const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/login`, {
+        const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/login`, {
             username,
             password
         });
@@ -19,7 +19,7 @@ function Login() {
         localStorage.setItem('token', response.data.token);
 
         // Redirect after sign in (maybe to home page or page user was trying to access?)
-        history.push('/');
+        navigate('/');
     } catch (error) {
         alert('Invalid username or password');
         console.error("Login error:", error);
