@@ -1,0 +1,8 @@
+.test-carousel {
+    height: 100vh;
+    width: 100vw;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

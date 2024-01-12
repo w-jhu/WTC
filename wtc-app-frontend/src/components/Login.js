@@ -19,7 +19,7 @@ function Login() {
         localStorage.setItem('token', response.data.token);
 
         // Redirect after sign in (maybe to home page or page user was trying to access?)
-        history.push('/');
+        // history.push('/');
     } catch (error) {
         alert('Invalid username or password');
         console.error("Login error:", error);

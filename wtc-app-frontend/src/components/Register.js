@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 import axios from 'axios';
 
-const registerUser = (event) => {
+const Register = (event) => {
     event.preventDefault();
 
     const name = document.getElementById('name').value;
@@ -35,7 +35,7 @@ const registerUser = (event) => {
     <div className="container">
       <div className="form-container">
         <h2>Register</h2>
-        <form onSubmit={registerUser}>
+        <form onSubmit={Register}>
           <label htmlFor="name">Name:</label>
           <input type="text" id="name" name="name" required />
 

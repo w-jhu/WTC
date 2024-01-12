@@ -18,7 +18,7 @@
 }
 .FrontPage{
     text-align: center;
-    height: 170vh;
+    height: 1300px;
     margin: 0;
     overflow: hidden;
 }
@@ -38,8 +38,8 @@
 
   .board {
     position: absolute;
-    top: 10%;
-    left: 30%;
+    top: 10vh;
+    left: 30vw;
     z-index: 2;
     text-align: left;
   }
@@ -48,12 +48,12 @@
 
   .WTC-global-1 {
     position: relative;
-    left: -120px;
-    top: -10px;
+    left: -8vw;
+    top: -1.85vh;
     font-family: 'Poppins-Bold';
     color: black;
-    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
-    font-size:60px;
+    text-shadow: 0px 0.25vw 0.1vw rgba(0, 0, 0, 0.5);
+    font-size:4.16vw;
   }
   .WTC-local-1-1 {
     color: #011F5B;
@@ -63,12 +63,12 @@
   }
   .WTC-global-2{
     position: relative;
-    left: -30px;
-    top: -20px;
+    left: -1.56vw;
+    top: -3.7vh;
     font-family: 'Poppins-Bold';
     color: black;
-    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
-    font-size: 45px;
+    text-shadow: 0px 0.25vw 0.1vw rgba(0, 0, 0, 0.5);
+    font-size: 3.16vw;
   }
   .WTC-local-2-1{
     color: #990000;
@@ -77,43 +77,43 @@
   .sponsors-text::before{
     content: "";
     display: block;
-    width: 80%;
-    left: 9.1%;
+    width: 80vw;
+    left: 9.1vw;
     bottom: 1;
-    height: 1px; /* Set the height of the line */
+    height: 0.093vh; /* Set the height of the line */
     background-color: #262460; /* Set the color of the line */
     position: absolute;
   }
 
   .sponsors-text{
     position: relative;
-    left: -10px;
-    top: 32px;
+    left: -0.52vw;
+    top: 5vh;
     font-family: 'Poppins-Bold';
     color: black;
-    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
-    font-size: 45px;
+    text-shadow: 0px 0.25vw 0.1vw rgba(0, 0, 0, 0.5);
+    font-size: 3.16vw;
   }
   .subheader-1 {
     position: relative;
     font-family: 'Poppins-Bold';
-    left: -140px;
-    top:-15px;
+    left: -8.5vw;
+    top:-2.5vh;
     color: #262460;
-    font-size:25px;
+    font-size:1.75vw;
   }
   .subheader-2 {
     position: relative;
     font-family: 'Poppins-Bold';
-    left: -50px;
+    left: -1.5vw;
     color: #262460;
-    font-size:25px;
+    font-size:1.75vw;
   }
   .summary-window {
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 2.75vh;
     color: #262460;
-    font-size: 30px;
+    font-size: 1.75vw;
     position: relative;
     font-family: 'Poppins';
   }
@@ -125,11 +125,11 @@
     padding: 0px 5px;
     background-color: white;
     color: #262460;
-    width: 100px;
-    border: 1px solid #999;
-    border-radius: 5px;
-    font-size: 30px;
-    margin-right: 20px;
+    width: 8vw;
+    border: 0.1vw solid #999;
+    border-radius: 0.5vw;
+    font-size: 1.75vw;
+    margin-right: 1vw;
     font-family: 'Poppins';
   }
   
@@ -142,28 +142,27 @@
 /* TerminalWindow.css */
 
 .terminal-window {
-    width: 1000px;
-    height: 400px;
+    width: 70vw;
+    height: 450px;
     background-color: #2d2c41;
     border: solid #2d2c41;
-    overflow: hidden;
     position: relative;
-    margin-top: -435px;
-    margin-left: 225px;
+    margin-top: -60vh; /* Adjust as needed */
+    margin-left: 200px; /* Adjust as needed */
     box-shadow: 8px 8px 1px rgba(0, 0, 0, 0.2);
     z-index: 2;
   }
   
   .terminal-header {
     background-color: white;
-    padding: 8px;
+    padding: 5px;
     display: flex;
     justify-content: flex-end;
   }
   .terminal-header-text {
     position: absolute;
-    margin-top: 2px;
-    margin-right: 750px;
+    top: 8px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
     font-size: 16px;
     font-family: 'Cascadia Code', monospace;
   }
@@ -241,21 +240,6 @@
     height: 100px; /* Adjust height as needed */
     background-color: #3498db; /* Set background color */
   }
-  
-  .command-input {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    color: #d4d4d4;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 14px;
-    width: 100%;
-  }
-  
-  .command-input::placeholder {
-    color: #006600;
-    opacity: 0.7;
-  }
 
   .cross {
     position: absolute;
@@ -275,5 +259,7 @@
     color: #2d2c41;
     pointer-events: none;
   }
+
+  
 
   

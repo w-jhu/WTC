@@ -34,17 +34,17 @@
   
   .menu-logo {
     position: absolute;
-    top: -12px;
-    left: 20px;
+    margin-top: -25px;
+    margin-left: -9vw;
     width: 140px;
     height: 140px;
     text-decoration: none;
   }
   
   .menu-item {
-    margin-right: 50px;
-    margin-top: 10px;
-    border-radius: 10px;
+    margin-right: 3vw;
+    margin-top: 1vh;
+    border-radius: 0.1vh;
     position: relative;
   }
   
@@ -55,7 +55,7 @@
     color: #262460;
     text-align: center;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 2vw;
     font-family: 'Aldrich';
   }
   
