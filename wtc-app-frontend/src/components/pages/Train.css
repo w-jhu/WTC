@@ -3,5 +3,53 @@
     font-family: 'Poppins-Bold';
     color: black;
     text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
-    font-size:60px;
+    font-size: 4vw;
   }
+.header-text {
+    position: relative;
+    font-family: 'Poppins';
+    color: black;
+    font-size:1.5vw;
+}
+.card {
+    width: 70vw;
+    min-height: 60vh;
+    margin-top: 25px;
+    margin-left: 12vw;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 1rem;
+    padding: 1.5rem;
+    z-index: 10;
+    color: whitesmoke;
+}
+.taskSelection{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Poppins';
+    color: black;
+    font-size:1.5vw;
+}
+
+/* Selection options */
+
+.subjectSelection{
+    display: flex;
+    flex-direction: column;
+}
+.selector {
+    display: flex;
+    align-items: center;
+    color:black;
+  }
+  
+  /* Optional: Add margin or padding for spacing */
+.selector input {
+    margin-right: 8px; /* Adjust as needed */
+}
+  

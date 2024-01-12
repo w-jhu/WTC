@@ -9,7 +9,8 @@ import Learn from './components/pages/Learn';
 import Leaderboard from './components/pages/Leaderboard';
 import Login from './components/Login';
 import Register from './components/Register';
-
+import Test from './components/pages/training-pages/Test';
+import Summary from './components/pages/training-pages/Summary';
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
           <Route path="/leaderboard" element={<Leaderboard/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<Register/>} />
+          <Route path="/test" element={<Test/>} />
+          <Route path="/summary" element={<Summary/>} />
         </Routes>
       </div>
     </Router>

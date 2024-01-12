@@ -4,32 +4,63 @@
   top: 0;
   left: 0;
   width: 100%;
+  opacity: 70%;
   height: 100%;
   z-index: -1;
 }
 
-.blob {
+.blob1 {
   position: absolute;
-  opacity: 0.8; /* Adjust opacity as needed */
+  width: 700px;
+  height: 700px;
+  background: linear-gradient(
+    180deg,
+    #c5093b 31.77%,
+    #06aafc 100%
+  );
+  mix-blend-mode: color-dodge;
+  -webkit-animation: moveBlob1 120s infinite alternate;
+          animation: moveBlob1 120s infinite alternate;
+  transition: 1s cubic-bezier(0.07, 0.8, 0.16, 1);
 }
 
-.blob1 {
-  clip-path: polygon(0 50%, 50% 0%, 100% 50%, 50% 100%);
-  background-color: #3498db; /* Blob color */
-  width: 150px;
-  height: 150px;
-  top: 20vh;
-  left: 20vw;
+@keyframes moveBlob1 {
+  from {
+    transform: translate(-100px, 10px) rotate(0deg) scale(80%);
+    border-radius: 34% 76% 35% 45% / 46% 36% 54% 66%;
+  }
+
+  to {
+    transform: translate(60px, 700px) rotate(360deg) scale(100%);
+    border-radius: 50% 89% 75% 67% / 60% 55% 65% 32%;
+  }
 }
 
 .blob2 {
-  clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
-  background-color: #e74c3c; /* Blob color */
-  width: 200px;
-  height: 200px;
-  top: 60vh;
-  left: 70vw;
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: linear-gradient(
+    180deg,
+    #c5093b 31.77%,
+    #06aafc 100%
+  );
+  mix-blend-mode: color-dodge;
+  -webkit-animation: moveBlob2 120s infinite alternate;
+          animation: moveBlob2 120s infinite alternate;
+  transition: 1s cubic-bezier(0.07, 0.8, 0.16, 1);
 }
 
+@keyframes moveBlob2 {
+  from {
+    transform: translate(800px, 400px) rotate(0deg) scale(100%);
+    border-radius: 34% 60% 35% 45% / 57% 36% 90% 66%;
+  }
+
+  to {
+    transform: translate(1200px,100px) rotate(200deg) scale(50%);
+    border-radius: 50% 80% 75% 67% / 60% 55% 65% 32%;
+  }
+}
   
   

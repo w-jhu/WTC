@@ -105,7 +105,7 @@ const Home = () => {
     </ul>
     <div className="terminal-window">
       <div className="terminal-header">
-        <div className = 'terminal-header-text'>Message from our board</div>
+        <div className = 'terminal-header-text'>MESSAGE FROM THE BOARD</div>
         <div className="button minimize" title="Minimize"><span className="underline">_</span></div>
         <div className="button maximize" title="Maximize"></div>
         <div className="button close" title="Close"><span className="cross">&#10005;</span></div>
@@ -120,10 +120,10 @@ const Home = () => {
     <div className="sponsors-text">
             <span className="WTC-local-1-2">SPONSORS</span> 
     </div>
-    <ul style={{ listStyleType: 'none', padding: 0, display: 'flex', gap: '150px', marginLeft: '160px', marginTop: '30px',}}>
+    <ul style={{ listStyleType: 'none', padding: 0, display: 'flex', gap: '10vw', marginLeft: '8vw', marginTop: '30px',}}>
       {pictureSources.map((src, index) => (
         <li key={index}>
-          <img src={src} alt={`Picture ${index + 1}`} style={{ width: '250px', height: 'auto' }} />
+          <img src={src} alt={`Picture ${index + 1}`} style={{ width: '20vw', height: 'auto' }} />
         </li>
       ))}
     </ul>
