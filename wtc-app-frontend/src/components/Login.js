@@ -15,9 +15,6 @@ function Login() {
         });
 
         alert('Login successful!');
-        // Save received token to in-memory storage
-        localStorage.setItem('token', response.data.token);
-
         // Redirect after sign in (maybe to home page or page user was trying to access?)
         navigate('/');
     } catch (error) {

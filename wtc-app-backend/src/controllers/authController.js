@@ -16,8 +16,14 @@ const register = async (req, res) => {
         await user.save();
 
         const token = generateAuthToken(user);
+        
+        res.cookie('token', token, {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === 'production',
+            maxAge: 2 * 60 * 60 * 1000 // two hours expiration
+        });
 
-        res.status(201).send({ user, token });
+        res.status(201).send({ user });
     } catch (error) {
         res.status(400).send(error);
     }
@@ -42,10 +48,27 @@ const login = async (req, res) => {
 
         const token = generateAuthToken(user);
 
-        res.status(200).send({ message: 'Login successful!', user, token });
+        res.cookie('token', token, {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === 'production',
+            maxAge: 2 * 60 * 60 * 1000 // expires in 2 hours
+        });
+
+        res.status(200).send({ message: 'Login successful!', user });
     } catch (error) {
         res.status(400).send(error);
     }
 };
 
-module.exports = { register, login };
+// Logout function
+const logout = (req, res) => {
+    // clear cookie
+    res.cookie('token', '', {
+        httpOnly: true,
+        expires: new Date(0)
+    });
+
+    res.status(200).send({ message: 'Logout successful!' });
+};
+
+module.exports = { register, login, logout };
