@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import { tsParticles } from 'https://cdn.jsdelivr.net/npm/@tsparticles/engine@3.0.3/+esm';
 import { loadAll } from 'https://cdn.jsdelivr.net/npm/@tsparticles/all@3.0.3/+esm';
 import './Home.css';
-import logo1 from './images/FranklinDAO.png'
-import logo2 from './images/Wharton-logo.png'
-import logo3 from './images/WUDAC+logo.png'
-import AnimatedCounter from './decorations/Counter.jsx';
+import logo1 from '../images/FranklinDAO.png'
+import logo2 from '../images/Wharton-logo.png'
+import logo3 from '../images/WUDAC+logo.png'
+import AnimatedCounter from '../decorations/Counter.jsx';
 
 
 const Home = () => {

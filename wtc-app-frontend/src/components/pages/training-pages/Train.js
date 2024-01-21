@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Train.css';
-import Blobs from '../decorations/Blob.jsx';
+import Blobs from '../../decorations/Blob.jsx';
 import { Link } from 'react-router-dom';
 
 const MemoizedBlobs = React.memo(Blobs);

@@ -1,18 +1,18 @@
 @font-face {
     font-family: 'Aldrich';
-    src: url('./fonts/Aldrich-Regular.ttf') format('truetype'); /* Replace with the correct path to your Aldrich font file */
+    src: url('../fonts/Aldrich-Regular.ttf') format('truetype'); /* Replace with the correct path to your Aldrich font file */
     font-weight: normal;
     font-style: normal;
   }
 @font-face {
     font-family: 'Poppins';
-    src: url('./fonts/Poppins-Medium.ttf') format('truetype'); /* Replace with the correct path to your Aldrich font file */
+    src: url('../fonts/Poppins-Medium.ttf') format('truetype'); /* Replace with the correct path to your Aldrich font file */
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Poppins-Bold';
-    src: url('./fonts/Poppins-Bold.ttf') format('truetype'); /* Replace with the correct path to your Aldrich font file */
+    src: url('../fonts/Poppins-Bold.ttf') format('truetype'); /* Replace with the correct path to your Aldrich font file */
     font-weight: normal;
     font-style: normal;
 }
