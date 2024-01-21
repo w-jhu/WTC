@@ -11,6 +11,7 @@ import Login from './components/pages/auth-pages/Login';
 import Register from './components/pages/auth-pages/Register';
 import Test from './components/pages/training-pages/Test';
 import Summary from './components/pages/training-pages/Summary';
+import Profile from './components/pages/auth-pages/Profile';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/register" element={<Register/>} />
           <Route path="/test" element={<Test/>} />
           <Route path="/summary" element={<Summary/>} />
+          <Route path="/profile" element={<Profile/>} />
         </Routes>
       </div>
     </Router>
