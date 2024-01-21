@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
+import { AuthContext } from '../../../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
 import axios from 'axios';
@@ -7,6 +8,7 @@ function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
   const attemptLogin = async () => {
     try {
         const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/login`, {
@@ -15,6 +17,7 @@ function Login() {
         });
 
         alert('Login successful!');
+        setIsLoggedIn(true);
         // Redirect after sign in (maybe to home page or page user was trying to access?)
         navigate('/');
     } catch (error) {
