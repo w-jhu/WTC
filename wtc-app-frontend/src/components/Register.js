@@ -30,6 +30,7 @@ const Register = () => {
             })
             .catch(error => {
                 console.error("Registration error:", error);
+                console.log(process.env.REACT_APP_BACKEND_URL);
                 // Handle error, show error message to the user
             });
     };

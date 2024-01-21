@@ -1,0 +1,35 @@
+.timer-container {
+    width: 50vw;
+    height: 20px;
+    margin-top: -20vh;
+    margin-left: 25%;
+    border: 1px solid #ccc;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background-image: 
+    repeating-linear-gradient(
+      45deg,
+      white,
+      white 10px,
+      #eeedea 10px,
+      #eeedea 20px /* determines size */
+    );
+  }
+  
+  .timer-bar {
+    height: 100%;
+    border-radius: 20px;
+    transition: width 1s linear;
+    background: #c5093b
+}
+
+  .timer-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #d7bc6a; /* or your preferred color */
+    font-family: 'Poppins';
+    font-size: 16px; /* or your preferred font size */
+  }

@@ -222,6 +222,7 @@
   
   .terminal-content {
     padding: 16px;
+    margin-top: 3vh;
     color: #d4d4d4;
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;

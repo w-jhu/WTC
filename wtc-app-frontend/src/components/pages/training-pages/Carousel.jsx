@@ -10,6 +10,12 @@ export const Carousel = ({ data }) => {
   const isLastIndex = slide === data.length - 1;
   const navigate = useNavigate();
 
+  // Randomizer
+  function getRandomValue(list) {
+    const randomIndex = Math.floor(Math.random() * list.length);
+    return list[randomIndex];
+  }
+
   if (!Array.isArray(data)) {
     console.error("Carousel: 'data' prop is not an array");
     return null;
@@ -24,15 +30,14 @@ export const Carousel = ({ data }) => {
   };
 
   // Logic for saving the user input
-  const handleSave = () => {
-    console.log('User input saved:', userInput);
-
+  const handleSave = (idx) => {
+    console.log('User input saved:', idx);
   };
   const submitAnswers = () => {
     console.log('User answers submitted:', userInput);
     navigate("/summary");
   }
-  // Edit this logic
+  // Edit this logicxs
 
   const renderButton = (idx) => {
     if (isLastIndex) {
@@ -45,7 +50,7 @@ export const Carousel = ({ data }) => {
     } else {
       // Render the default button for other slides
       return (
-        <button onClick={handleSave} id={idx}>
+        <button onClick={handleSave(idx)} id={idx}>
           Save
         </button>
       );
@@ -59,7 +64,10 @@ export const Carousel = ({ data }) => {
       {data.map((item, idx) => (
         <div key={idx} className={slide === idx ? 'slide' : 'slide slide-hidden'}>
           <div className='test-headliner'>Problem {idx+1}: {item.headline}</div>
-          {item.text}
+          {
+          // Here we plug in the values from json file
+          item.text.replace(/\$a\$/g, '9')
+          }
           <div className='userInput'>
             <input
                 type="text"

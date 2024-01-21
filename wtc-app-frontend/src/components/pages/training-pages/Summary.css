@@ -1,0 +1,18 @@
+.summaryContainer{
+    width: 70vw;
+    min-height: 80vh;
+    margin-top: 25px;
+    margin-left: 12vw;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 1rem;
+    padding: 1.5rem;
+    z-index: 10;
+    color: black;
+}
+.taskGraph{
+    width: 100vw;
+}
