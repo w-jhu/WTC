@@ -1,6 +1,6 @@
 [
-    { "text": "Text 1", "headline": "Hallucinations", "alt": "Image 1 for carousel" },
-    { "text": "Text 2", "headline": "Doom", "alt": "Image 2 for carousel" },
-    { "text": "Text 3", "headline": "Work","alt": "Image 3 for carousel" }
+    { "text": "Text 1 $a$", "headline": "Hallucinations", "function": "(a) => a+1", "variables": {"a": [2, 4, 8, 16, 32, 64, 128], "b": [0], "c": [0],"d": [0],"e": [0]}},
+    { "text": "Text 2", "headline": "Doom", "function": "(a) => a+3", "variables": {"a": [2, 4, 8, 16, 32, 64, 128], "b": [0], "c": [0],"d": [0],"e": [0]}},
+    { "text": "Text 3", "headline": "Work", "function": "(a) => a+2", "variables": {"a": [2, 4, 8, 16, 32, 64, 128], "b": [0], "c": [0],"d": [0],"e": [0]} }
   ]
   
