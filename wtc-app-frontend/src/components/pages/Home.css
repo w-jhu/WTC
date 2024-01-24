@@ -21,15 +21,21 @@
     height: 1300px;
     margin: 0;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 #light {
+    position: absolute;
+    top: 0;
     left: 0;
-    width: 100vw;
-    height: 135vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    z-index: -1;
   }
   
   #light canvas {
@@ -37,19 +43,17 @@
   }
 
   .board {
-    position: absolute;
-    top: 10vh;
-    left: 30vw;
     z-index: 2;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
   }
 
   /* Top text in css */
 
   .WTC-global-1 {
-    position: relative;
-    left: -8vw;
-    top: -1.85vh;
     font-family: 'Poppins-Bold';
     color: black;
     text-shadow: 0px 0.25vw 0.1vw rgba(0, 0, 0, 0.5);
@@ -62,9 +66,6 @@
     color: #990000;
   }
   .WTC-global-2{
-    position: relative;
-    left: -1.56vw;
-    top: -3.7vh;
     font-family: 'Poppins-Bold';
     color: black;
     text-shadow: 0px 0.25vw 0.1vw rgba(0, 0, 0, 0.5);
@@ -82,7 +83,6 @@
     bottom: 1;
     height: 0.093vh; /* Set the height of the line */
     background-color: #262460; /* Set the color of the line */
-    position: absolute;
   }
 
   .sponsors-text{
@@ -95,23 +95,20 @@
     font-size: 3.16vw;
   }
   .subheader-1 {
-    position: relative;
     font-family: 'Poppins-Bold';
-    left: -8.5vw;
-    top:-2.5vh;
     color: #262460;
     font-size:1.75vw;
   }
   .subheader-2 {
-    position: relative;
     font-family: 'Poppins-Bold';
-    left: -1.5vw;
     color: #262460;
     font-size:1.75vw;
   }
   .summary-window {
     display: block;
     margin-bottom: 2.75vh;
+    margin-right: auto;
+    margin-left: 4rem;
     color: #262460;
     font-size: 1.75vw;
     position: relative;
@@ -147,8 +144,6 @@
     background-color: #2d2c41;
     border: solid #2d2c41;
     position: relative;
-    margin-top: -60vh; /* Adjust as needed */
-    margin-left: 200px; /* Adjust as needed */
     box-shadow: 8px 8px 1px rgba(0, 0, 0, 0.2);
     z-index: 2;
   }
