@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const AnimatedCounter = ({ targetNumber, duration }) => {
+const AnimatedCounter = ({ targetNumber, duration, negative_power }) => {
   const [count, setCount] = useState(0);
   const intervalDuration = 1000 / 60; // 60 frames per second
 
@@ -25,13 +25,13 @@ const AnimatedCounter = ({ targetNumber, duration }) => {
     animationFrameId = requestAnimationFrame(animate);
 
     return () => cancelAnimationFrame(animationFrameId);
-  }, [targetNumber, duration]);
+  }, [targetNumber/(10**negative_power), duration]);
 
   // Easing function (ease-in-out)
   const easeInOut = (t) => 0.5 * (1 - Math.cos(Math.PI * t));
 
   return (
-    <div>{count}
+    <div>{count/(10**negative_power)}
     </div>
   );
 };
