@@ -1,4 +1,5 @@
 .summaryContainer{
+    display:flex;
     width: 70vw;
     min-height: 90vh;
     margin-top: 25px;
@@ -10,6 +11,23 @@
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     border-radius: 1rem;
     padding: 1.5rem;
-    z-index: 10;
+    z-index: 0;
     color: black;
+}
+.profile{
+    margin-top: -30vw;
+    margin-left: 26vw;
+    height:20vw;
+    width: 44vw;
+    background-color: lightblue; 
+}
+.scoreSummary{
+    position: relative;
+}
+.header-profile{
+    position: absolute;
+    margin-top: -0.5vw;
+    margin-left: 120px;
+    font-family: Poppins-Bold;
+    font-size: 30px;
 }

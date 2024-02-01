@@ -21,7 +21,7 @@ const Summary = () => {
                     <li></li>
                     <li></li>
             </ul>
-    </div >
+            </div >
             <div className='summaryContainer'>
                 <div className='taskGraph'>
                     <BarGraph data = {slides}/>
