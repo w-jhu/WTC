@@ -86,19 +86,19 @@ const Home = () => {
             <div className= 'subheader-1'>Join our vibrant community. Over our long history we got:
             </div>
             <li className="summary-window">
-                <button id="quants-button"><AnimatedCounter targetNumber={197} duration={5} /></button>
+                <button id="quants-button"><AnimatedCounter targetNumber={197} duration={5} negative_power={0} /></button>
                 Quants On Board
             </li>
             <li className="summary-window">
-                <button id="prizes-button"><AnimatedCounter targetNumber={5000} duration={5} /></button>
+                <button id="prizes-button"><AnimatedCounter targetNumber={5000} duration={5} negative_power={0}/></button>
                 Dollars In Prizes
             </li>
             <li className="summary-window">
-                <button id="hours-button"><AnimatedCounter targetNumber={698} duration={5} /></button>
+                <button id="hours-button"><AnimatedCounter targetNumber={698} duration={5} negative_power={0}/></button>
                 Hours Spent Solving Problems
             </li>
             <li className="summary-window">
-                <button id="tasks-button"><AnimatedCounter targetNumber={1097} duration={5} /></button>
+                <button id="tasks-button"><AnimatedCounter targetNumber={1097} duration={5} negative_power={0}/></button>
                 Tasks Have Been Solved
             </li>
             <div className='subheader-2'>And an infinite number of great memories!
